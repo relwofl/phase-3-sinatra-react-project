@@ -6,4 +6,8 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+  get '/cows' do
+    cows = Cow.all.order(:name).limit(10)
+    cows.to_json
+  end
 end
