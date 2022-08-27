@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/cows' do
-    cows = Cow.all.order(:name).limit(10)
+    cows = Cow.all
     cows.to_json
   end
 end
