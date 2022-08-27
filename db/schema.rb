@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_10_151911) do
+ActiveRecord::Schema.define(version: 2022_08_27_160528) do
 
   create_table "cows", force: :cascade do |t|
     t.string "name"
     t.integer "mother_id"
     t.index ["mother_id"], name: "index_cows_on_mother_id"
+  end
+
+  create_table "farms", force: :cascade do |t|
+    t.string "name"
+    t.string "field"
+    t.string "season"
+    t.integer "duration"
+    t.text "note"
   end
 
   add_foreign_key "cows", "cows", column: "mother_id"
