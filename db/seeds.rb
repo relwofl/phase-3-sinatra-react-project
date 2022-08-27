@@ -7,4 +7,6 @@ puts "🌱 Seeding spices..."
         # mother: rand(3..12)
     )
 end
+
+Farm.create(name: , field: , season: , duration: , )
 puts "✅ Done seeding!"
