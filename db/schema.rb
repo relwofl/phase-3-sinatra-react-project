@@ -18,11 +18,10 @@ ActiveRecord::Schema.define(version: 2022_08_27_160528) do
     t.index ["mother_id"], name: "index_cows_on_mother_id"
   end
 
-  create_table "farms", force: :cascade do |t|
+  create_table "fields", force: :cascade do |t|
+    t.string "farm"
     t.string "name"
-    t.string "field"
-    t.string "season"
-    t.integer "duration"
+    t.integer "cow_id"
     t.text "note"
   end
 
