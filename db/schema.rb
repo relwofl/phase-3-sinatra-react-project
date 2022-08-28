@@ -15,13 +15,13 @@ ActiveRecord::Schema.define(version: 2022_08_27_160528) do
   create_table "cows", force: :cascade do |t|
     t.string "name"
     t.integer "mother_id"
+    t.integer "farm_field_id"
     t.index ["mother_id"], name: "index_cows_on_mother_id"
   end
 
-  create_table "fields", force: :cascade do |t|
+  create_table "farm_fields", force: :cascade do |t|
     t.string "farm"
     t.string "name"
-    t.integer "cow_id"
     t.text "note"
   end
 

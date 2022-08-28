@@ -3,17 +3,18 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 10.times do 
     Cow.create(
-        name: Faker::Name.first_name
-        # mother: rand(3..12)
+        name: Faker::Name.first_name,
+        farm_field_id: rand(7..14)
+        # mother_id: rand(21..30)
     )
 end
 
-Field.create(farm: "IHF", name: "Upper", note: "")
-Field.create(farm: "IHF", name: "Lower", note: "")
-Field.create(farm: "IHF", name: "Solar", note: "")
-Field.create(farm: "IHF", name: "Potato Patch", note: "")
-Field.create(farm: "BNF", name: "Far", note: "closed to cows for haying")
-Field.create(farm: "BNF", name: "North", note: "")
-Field.create(farm: "BNF", name: "East", note: "")
+FarmField.create(farm: "IHF", name: "Upper", note: "")
+FarmField.create(farm: "IHF", name: "Lower", note: "")
+FarmField.create(farm: "IHF", name: "Solar", note: "")
+FarmField.create(farm: "IHF", name: "Potato Patch", note: "")
+FarmField.create(farm: "BNF", name: "Far", note: "closed to cows for haying")
+FarmField.create(farm: "BNF", name: "North", note: "")
+FarmField.create(farm: "BNF", name: "East", note: "")
 
 puts "✅ Done seeding!"

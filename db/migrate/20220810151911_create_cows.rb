@@ -4,6 +4,7 @@ class CreateCows < ActiveRecord::Migration[6.1]
       t.string :name
       # t.integer :calf_id
       t.references :mother, foreign_key: {to_table: :cows }
+      t.integer :farm_field_id
       # t.string :gender
       # t.string :category
       # t.integer :age
