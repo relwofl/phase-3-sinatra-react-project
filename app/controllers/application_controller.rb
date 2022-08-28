@@ -18,6 +18,16 @@ class ApplicationController < Sinatra::Base
   cow = Cow.find(params[:id])
   cow.to_json
   end
+## create cow
+post '/cows' do 
+  # binding.pry
+  cow = Cow.create(
+    name: params[:name],
+    mother_id: params[:mother_id],
+    farm_field_id: params[:farm_field_id]
+  )
+  cow.to_json
+end
 
   ###delete cow
 
