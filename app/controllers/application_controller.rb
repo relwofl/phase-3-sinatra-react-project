@@ -39,7 +39,7 @@ patch '/cows/:id' do
   cow.to_json
   end
   ###delete cow
-
+delete '/cows/:id' do
 
 
   ##farm fields
