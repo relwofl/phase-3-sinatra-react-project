@@ -28,7 +28,16 @@ post '/cows' do
   )
   cow.to_json
 end
-
+### update cow 
+patch '/cows/:id' do
+  cow = Cow.find(params[:id])
+  cow.update(
+    name: params[:name],
+    mother_id: params[:mother_id],
+    farm_field_id: params[:farm_field_id]
+  )
+  cow.to_json
+  end
   ###delete cow
 
 
