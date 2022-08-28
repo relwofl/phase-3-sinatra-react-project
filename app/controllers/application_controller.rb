@@ -40,6 +40,10 @@ patch '/cows/:id' do
   end
   ###delete cow
 delete '/cows/:id' do
+  cow = Cow.find(params[:id])
+  cow.destroy
+  cow.to_json
+end
 
 
   ##farm fields
